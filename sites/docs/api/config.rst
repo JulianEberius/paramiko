@@ -38,6 +38,11 @@ file format, and the intended meaning of the keywords and values; or check the
 documentation for your Paramiko-using library of choice (again, often
 `Fabric`_) to see what it honors on its end.
 
+- ``CanonicalizeFallbackLocal``:
+- ``CanonicalizeHostname``: as with OpenSSH, when a lookup results in this
+  being set to ``yes``, it triggers an attempt to resolve the requested
+  hostname under one of the given ``CanonicalDomains`` and re-parse the entire
+  config file.
 - ``AddressFamily``: used when looking up the local hostname for purposes of
   expanding the ``%l``/``%L`` :ref:`tokens <TOKENS>`.
 
